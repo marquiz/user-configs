@@ -66,6 +66,10 @@ export GNOME_KEYRING_PID
 
 # Bell off
 xset -b
+xrandr &> /dev/null
+if [ -x /usr/bin/prlcc ]; then
+    /usr/bin/prlcc &
+fi
 
 # Start screensaver
 #xscreensaver &
