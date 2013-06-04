@@ -64,6 +64,9 @@ export GPG_AGENT_INFO
 export GNOME_KEYRING_CONTROL
 export GNOME_KEYRING_PID
 
+# Bell off
+xset -b
+
 # day planer deamon
 # pland &
 
