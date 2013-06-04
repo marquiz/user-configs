@@ -26,3 +26,7 @@
 #export PILOTRATE=115200
 
 test -s ~/.alias && . ~/.alias || true
+
+# Added by marquiz
+export EMAIL="markus.lehtonen@linux.intel.com"
+export PATH="/sbin:/usr/sbin:$PATH:/home/marquiz/scripts"
