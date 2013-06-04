@@ -52,3 +52,4 @@ if [ -e /etc/bash_completion.d/git-prompt.sh ]; then
     PROMPT_COMMAND='__git_ps1 "\[\033[32;1m\]\u@\h \[\033[34m\]\w\[\033[0m\]" "\\\$ "'
 fi
 #PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+export GIT_CEILING_DIRECTORIES=$HOME
