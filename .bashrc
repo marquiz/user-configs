@@ -37,3 +37,10 @@ export COMP_WORDBREAKS="`echo "$COMP_WORDBREAKS" | sed -e s/://`"
 
 # Use development versions of GBP and GBS
 export PYTHONPATH=~/src/git-buildpackage/:~/src/gbs:~/src/otctools/obs-service-git-buildpackage:~/src/otctools/obs-service-gbs
+#:~/src/mic
+
+# Hack to make vim use 256 colors in terminator terminal
+# Remove when https://bugs.launchpad.net/terminator/+bug/794561 is deployed
+if [ "$TERM" == "xterm" ]; then
+    export TERM=xterm-256color
+fi
