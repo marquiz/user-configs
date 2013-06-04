@@ -67,6 +67,9 @@ export GNOME_KEYRING_PID
 # Bell off
 xset -b
 
+# Start screensaver
+xscreensaver &
+
 # day planer deamon
 # pland &
 
