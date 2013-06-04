@@ -50,3 +50,4 @@ source /etc/bash_completion.d/git-prompt.sh
 GIT_PS1_SHOWCOLORHINTS=1
 PROMPT_COMMAND='__git_ps1 "\[\033[32;1m\]\u@\h \[\033[34m\]\w\[\033[0m\]" "\\\$ "'
 #PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+export GIT_CEILING_DIRECTORIES=$HOME
