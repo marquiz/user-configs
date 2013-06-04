@@ -26,3 +26,10 @@ test -z "$PROFILEREAD" && . /etc/profile || true
 #    /usr/bin/fortune
 #    echo
 #fi
+
+# Added by marquiz:
+# start ssh-agent for non-graphical logins
+if [ x$DISPLAY == x ] ; then
+	eval `ssh-agent`
+	ssh-add
+fi
