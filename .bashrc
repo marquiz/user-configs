@@ -30,3 +30,7 @@ test -s ~/.alias && . ~/.alias || true
 # Added by marquiz
 export EMAIL="markus.lehtonen@linux.intel.com"
 export PATH="/sbin:/usr/sbin:$PATH:/home/marquiz/scripts"
+
+# Remove colon from bash autocompletion delimiters
+# makes navigating in obs project structure a lot nicer
+export COMP_WORDBREAKS="`echo "$COMP_WORDBREAKS" | sed -e s/://`"
