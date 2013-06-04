@@ -68,7 +68,7 @@ export GNOME_KEYRING_PID
 xset -b
 
 # Start screensaver
-xscreensaver &
+#xscreensaver &
 
 # day planer deamon
 # pland &
