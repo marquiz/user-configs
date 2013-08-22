@@ -70,6 +70,9 @@ xset -b
 # Start screensaver
 xscreensaver &
 
+# Set dual screen
+xrandr --output DVI-D-1 --right-of DVI-I-1 --mode 1920x1200
+
 # day planer deamon
 # pland &
 
