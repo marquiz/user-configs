@@ -10,3 +10,10 @@ fi
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
 
 export PATH
+
+# Added by marquiz:
+# start ssh-agent for non-graphical logins
+if [ x$DISPLAY == x ] ; then
+	eval `ssh-agent`
+	ssh-add
+fi
