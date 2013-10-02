@@ -73,6 +73,11 @@ xscreensaver &
 # Set dual screen
 xrandr --output DVI-D-1 --right-of DVI-I-1 --mode 1920x1200
 
+# Start udisks-glue for automounting
+if [ -x /usr/bin/udisks-glue ]; then
+    /usr/bin/udisks-glue
+fi
+
 # day planer deamon
 # pland &
 
