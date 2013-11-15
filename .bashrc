@@ -132,8 +132,8 @@ if [ "$TERM" == "xterm" ]; then
 fi
 
 # Git branch to prompt
-if [ -e /etc/bash_completion.d/git-prompt.sh ]; then
-    source /etc/bash_completion.d/git-prompt.sh
+if [ -e /etc/bash_completion.d/git-prompt* ]; then
+    source /etc/bash_completion.d/git-prompt*
     GIT_PS1_SHOWCOLORHINTS=1
     PROMPT_COMMAND='__git_ps1 "\[\033[32;1m\]\u@\h \[\033[34m\]\w\[\033[0m\]" "\\\$ "'
 fi
