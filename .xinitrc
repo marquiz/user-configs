@@ -24,5 +24,7 @@ export GNOME_KEYRING_PID
 # Bell off
 xset -b
 xrandr &> /dev/null
-prlcc &
+if [ -x /usr/bin/prlcc ]; then
+    /usr/bin/prlcc &
+fi
 
