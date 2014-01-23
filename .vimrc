@@ -25,32 +25,3 @@ hi Tab ctermbg=blue
 autocmd FileType c source ~/.vim/c-2.vim
 autocmd FileType make setlocal noexpandtab
 
-if has("cscope")
-"        set csprg=/usr/local/bin/cscope
-    set csto=0
-    set cst
-    set nocsverb
-    " add any database in current directory
-    if filereadable("cscope.out")
-        cs add cscope.out
-    " else add database pointed to by environment
-    elseif $CSCOPE_DB != ""
-        cs add $CSCOPE_DB
-    endif
-    set csverb
-
-    " Key Mappings
-    map <C-[> :cs find 3 <C-R>=expand("<cword>")<CR><CR>
-    map <C-_> :cs find 0 <C-R>=expand("<cword>")<CR><CR>
-
-    " Using 'CTRL-spacebar' then a search type makes the vim window
-    " split vertically, with search result displayed in
-    " the new window.
-    nmap <C-@>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-@>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-@>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-@>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-@>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
-    nmap <C-@>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-    nmap <C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
-endif
