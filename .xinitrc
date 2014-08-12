@@ -39,6 +39,8 @@ fi
 # Start screensaver
 #xscreensaver &
 
+test -r .Xmodmap && xmodmap .Xmodmap
+
 exec awesome
 
 # exec gnome-session
