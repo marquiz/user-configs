@@ -34,6 +34,9 @@ fi
 if [ -e /usr/share/git-core/contrib/completion/git-prompt* ]; then
     GIT_COMPLETION_SH="/usr/share/git-core/contrib/completion/git-prompt*"
 fi
+if [ -e /usr/share/git/completion/git-prompt* ]; then
+    GIT_COMPLETION_SH="/usr/share/git/completion/git-prompt*"
+fi
 if [ -n "$GIT_COMPLETION_SH" ]; then
     source $GIT_COMPLETION_SH
     GIT_PS1_SHOWCOLORHINTS=1
