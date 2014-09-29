@@ -1,4 +1,4 @@
 ! Set right win as mod3 modifier
-keycode 0x87 = Super_R
+keycode 0x86 = Super_R
 clear Mod4
 add Mod4 = Super_R
