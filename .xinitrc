@@ -53,16 +53,16 @@ if test -z "$DBUS_SESSION_BUS_ADDRESS" ; then
     export DBUS_SESSION_BUS_PID
 fi
 
-# SSH agent (I use Gnome keyring, instead)
-#eval `ssh-agent`
-#ssh-add
-
 # Gnome keyring stuff
 eval `/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg`
-export SSH_AUTH_SOCK
+#export SSH_AUTH_SOCK
 export GPG_AGENT_INFO
 export GNOME_KEYRING_CONTROL
 export GNOME_KEYRING_PID
+
+# SSH agent
+eval `ssh-agent`
+ssh-add
 
 # Bell off
 xset -b
@@ -73,6 +73,14 @@ fi
 
 # Start screensaver
 #xscreensaver &
+
+# Set dual screen
+xrandr --output DVI-D-1 --right-of DVI-I-1 --mode 1920x1200
+
+# Start udisks-glue for automounting
+if [ -x /usr/bin/udisks-glue ]; then
+    /usr/bin/udisks-glue
+fi
 
 # day planer deamon
 # pland &

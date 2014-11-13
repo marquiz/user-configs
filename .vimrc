@@ -25,6 +25,14 @@ hi Tab ctermbg=blue
 autocmd FileType c source ~/.vim/c-2.vim
 autocmd FileType make setlocal noexpandtab
 
+"copy to systems CLIPBOARD buffer instead of PRIMARY ("mouse selection" buf)
+vnoremap <C-c> "+y
+
+"set mouse mode
+if strlen($DISPLAY)
+    set mouse=a
+endif
+
 if has("cscope")
 "        set csprg=/usr/local/bin/cscope
     set csto=0
