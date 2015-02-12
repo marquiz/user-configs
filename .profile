@@ -20,3 +20,10 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+# Added by marquiz:
+# start ssh-agent for non-graphical logins
+if [ x$DISPLAY == x ] ; then
+	eval `ssh-agent`
+	ssh-add
+fi
