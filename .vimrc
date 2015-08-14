@@ -1,24 +1,29 @@
 set nocompatible
 "filetype plugin on     " takes some actions based on your filetype--used for changelog
 filetype plugin indent on
-set expandtab           " use spaces instead of tabs
-set tabstop=4           " tabstops of #
-set shiftwidth=4        " indents of #
-"set textwidth=78        " screen in 80 columns wide, wrap at 78
-set formatoptions=croqt  " add 'l' to not break long lines
-set smarttab
-set pastetoggle=<F3>
-set list listchars=tab:»·,trail:·
 
-hi WhiteSpaceEOL ctermbg=red
+" EDITOR SETTINGS
+set expandtab           " use spaces instead of tabs
+set tabstop=4           " number of spaces one tab takes on screen
+set shiftwidth=4        " number of spaces for indents
+"set textwidth=78        " screen in 80 columns wide, wrap at 78
+set formatoptions=croqt " add 'l' to not break long lines
+set smarttab            " smart tab for indenting
+set pastetoggle=<F3>
+
+" DISPLAY / VIEW SETTINGS
+set laststatus=2        " always show the status bar
+set ruler               " show cursor position in status bar
+set number              " enable line numbers
+set list listchars=tab:»·,trail:·   " show special characters
+set colorcolumn=80      " highlight 80th column...
+hi ColorColumn ctermbg=233          "...with very dark grey
+
+hi WhiteSpaceEOL ctermbg=red        " hilight trailing whitespace with red
 match WhiteSpaceEOL /\s\+$/
 
-" highlight 80th column with very dark grey
-set colorcolumn=80
-highlight ColorColumn ctermbg=233
-
 "hi Tab ctermbg=blue gui=underline guifg=blue
-hi Tab ctermbg=blue
+hi Tab ctermbg=blue                 " highlight tab characters with blue
 2match Tab /\t/
 
 "autocmd FileType c source ~/.vim/c-kern.vim
