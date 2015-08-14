@@ -26,6 +26,10 @@ match WhiteSpaceEOL /\s\+$/
 hi Tab ctermbg=blue                 " highlight tab characters with blue
 2match Tab /\t/
 
+" MISC SETTINGS
+set nobackup            " do not create backup files
+
+
 "autocmd FileType c source ~/.vim/c-kern.vim
 autocmd FileType c source ~/.vim/c-2.vim
 autocmd FileType make setlocal noexpandtab
