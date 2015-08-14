@@ -29,6 +29,11 @@ hi Tab ctermbg=blue                 " highlight tab characters with blue
 " MISC SETTINGS
 set nobackup            " do not create backup files
 
+" Autoload vimrc when editing (and saving) it
+augroup myvimrc
+    au!
+    au BufWritePost .vimrc,_vimrc,vimrc so $MYVIMRC
+augroup END
 
 "autocmd FileType c source ~/.vim/c-kern.vim
 autocmd FileType c source ~/.vim/c-2.vim
