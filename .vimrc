@@ -12,6 +12,7 @@ set smarttab            " smart tab for indenting
 set pastetoggle=<F3>
 
 " DISPLAY / VIEW SETTINGS
+syntax on
 set laststatus=2        " always show the status bar
 set ruler               " show cursor position in status bar
 set number              " enable line numbers
