@@ -14,7 +14,7 @@ set pastetoggle=<F3>
 " DISPLAY / VIEW SETTINGS
 set laststatus=2        " always show the status bar
 set ruler               " show cursor position in status bar
-set number              " enable line numbers
+" set number              " enable line numbers
 set list listchars=tab:»·,trail:·   " show special characters
 set colorcolumn=80      " highlight 80th column...
 hi ColorColumn ctermbg=233          "...with very dark grey
@@ -43,9 +43,9 @@ autocmd FileType make setlocal noexpandtab
 vnoremap <C-c> "+y
 
 "set mouse mode
-if strlen($DISPLAY)
-    set mouse=a
-endif
+"if strlen($DISPLAY)
+"    set mouse=a
+"endif
 
 if has("cscope")
 "        set csprg=/usr/local/bin/cscope
