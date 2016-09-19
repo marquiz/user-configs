@@ -142,7 +142,7 @@ fi
 if [ -n "$GIT_COMPLETION_SH" ]; then
     source $GIT_COMPLETION_SH
     GIT_PS1_SHOWCOLORHINTS=1
-    PROMPT_COMMAND='__git_ps1 "\[\033[32;1m\]\u@\h \[\033[34m\]\w\[\033[0m\]" "\\\$ "'
+    PROMPT_COMMAND='__git_ps1 "\[\033[33;1m\]\u@\h \[\033[34m\]\w\[\033[0m\]" "\\\$ "'
 fi
 #PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 export GIT_CEILING_DIRECTORIES=$HOME
