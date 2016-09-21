@@ -81,6 +81,10 @@ fi
 # day planer deamon
 # pland &
 
+# Rotate right display
+xrandr --output DVI-D-1 --rotate left
+xrandr --output DVI-D-1 --pos 1920x-430
+
 # 
 # finally start the window manager
 #
