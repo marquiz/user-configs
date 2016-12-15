@@ -74,8 +74,9 @@ fi
 # Start screensaver
 #xscreensaver &
 
-# Set dual screen
-xrandr --output DVI-D-1 --right-of DVI-I-1 --mode 1920x1200
+# Set triple screen
+xrandr --output HDMI-1 --mode 1920x1200 --rotate left --pos -1200x-430
+xrandr --output DVI-D-1 --mode 1920x1200 --rotate left --pos 3120x0
 
 # Start udisks-glue for automounting
 if [ -x /usr/bin/udisks-glue ]; then
@@ -85,7 +86,7 @@ fi
 # day planer deamon
 # pland &
 
-# 
+#
 # finally start the window manager
 #
 unset WINDOW_MANAGER STARTUP
