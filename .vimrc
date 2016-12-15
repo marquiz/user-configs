@@ -37,6 +37,8 @@ augroup END
 
 "autocmd FileType c source ~/.vim/c-kern.vim
 autocmd FileType c source ~/.vim/c-2.vim
+autocmd FileType html setlocal ts=2 sw=2
+autocmd FileType htmldjango setlocal ts=2 sw=2
 autocmd FileType make setlocal noexpandtab
 
 "copy to systems CLIPBOARD buffer instead of PRIMARY ("mouse selection" buf)
