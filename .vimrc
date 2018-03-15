@@ -44,6 +44,9 @@ autocmd FileType make setlocal noexpandtab
 "copy to systems CLIPBOARD buffer instead of PRIMARY ("mouse selection" buf)
 vnoremap <C-c> "+y
 
+" Map <Space> to clear search highlight
+map <Space> :noh<cr>
+
 "set mouse mode
 "if strlen($DISPLAY)
 "    set mouse=a
