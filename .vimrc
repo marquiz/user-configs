@@ -15,7 +15,7 @@ set pastetoggle=<F3>
 set laststatus=2        " always show the status bar
 set ruler               " show cursor position in status bar
 " set number              " enable line numbers
-set list listchars=tab:»·,trail:·   " show special characters
+set list listchars=tab:»·,trail:·,nbsp:¬   " show special characters
 set colorcolumn=80      " highlight 80th column...
 hi ColorColumn ctermbg=233          "...with very dark grey
 
@@ -23,8 +23,8 @@ hi WhiteSpaceEOL ctermbg=red        " hilight trailing whitespace with red
 match WhiteSpaceEOL /\s\+$/
 
 "hi Tab ctermbg=blue gui=underline guifg=blue
-hi Tab ctermbg=blue                 " highlight tab characters with blue
-2match Tab /\t/
+hi Tab ctermbg=blue                 " highlight tab and no-breaking space with blue
+2match Tab /[ \t]/
 
 " MISC SETTINGS
 set nobackup            " do not create backup files
@@ -40,9 +40,13 @@ autocmd FileType c source ~/.vim/c-2.vim
 autocmd FileType html setlocal ts=2 sw=2
 autocmd FileType htmldjango setlocal ts=2 sw=2
 autocmd FileType make setlocal noexpandtab
+autocmd FileType yaml setlocal ts=2 sw=2
 
 "copy to systems CLIPBOARD buffer instead of PRIMARY ("mouse selection" buf)
 vnoremap <C-c> "+y
+
+" Map <Space> to clear search highlight
+map <Space> :noh<cr>
 
 "set mouse mode
 "if strlen($DISPLAY)
