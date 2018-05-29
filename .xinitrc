@@ -77,7 +77,7 @@ fi
 # day planer deamon
 # pland &
 
-# 
+#
 # finally start the window manager
 #
 unset WINDOW_MANAGER STARTUP
