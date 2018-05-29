@@ -45,4 +45,9 @@ fi
 if [ -e /usr/share/bash-completion/completions/git ]; then
     source /usr/share/bash-completion/completions/git
 fi
+
+if [ -e /etc/bash_completion.d/git ]; then
+    source /etc/bash_completion.d/git
+fi
+
 export GIT_CEILING_DIRECTORIES=$HOME
