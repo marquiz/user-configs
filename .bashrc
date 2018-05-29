@@ -39,7 +39,7 @@ fi
 if [ -n "$GIT_PROMPT_SH" ]; then
     source $GIT_PROMPT_SH
     GIT_PS1_SHOWCOLORHINTS=1
-    PROMPT_COMMAND='__git_ps1 "\[\033[33;1m\]\u@\h \[\033[34m\]\w\[\033[0m\]" "\\\$ "'
+    PROMPT_COMMAND='__git_ps1 "\[\033[35;1m\]\u@\h \[\033[34m\]\w\[\033[0m\]" "\\\$ "'
 fi
 #PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 if [ -e /usr/share/bash-completion/completions/git ]; then
