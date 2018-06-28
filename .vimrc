@@ -41,6 +41,8 @@ autocmd FileType html setlocal ts=2 sw=2
 autocmd FileType htmldjango setlocal ts=2 sw=2
 autocmd FileType make setlocal noexpandtab
 autocmd FileType yaml setlocal ts=2 sw=2
+autocmd FileType go 2match Tab /[ ]/
+autocmd FileType go setlocal nolist
 
 "copy to systems CLIPBOARD buffer instead of PRIMARY ("mouse selection" buf)
 vnoremap <C-c> "+y
