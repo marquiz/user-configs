@@ -41,6 +41,8 @@ autocmd FileType html setlocal ts=2 sw=2
 autocmd FileType htmldjango setlocal ts=2 sw=2
 autocmd FileType make setlocal noexpandtab
 autocmd FileType yaml setlocal ts=2 sw=2
+autocmd FileType go 2match Tab /[ ]/
+autocmd FileType go setlocal nolist
 
 "copy to systems CLIPBOARD buffer instead of PRIMARY ("mouse selection" buf)
 vnoremap <C-c> "+y
@@ -82,3 +84,13 @@ if has("cscope")
     nmap <C-@>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
     nmap <C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
 endif
+
+" Disable vim version warning of the vim-go plugin
+let g:go_version_warning = 0
+
+" GO Highlight
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
