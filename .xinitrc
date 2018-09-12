@@ -71,8 +71,9 @@ xset -b
 xscreensaver &
 
 # Set triple screen
-xrandr --output HDMI-1 --mode 1920x1200 --rotate left --pos -1200x-430
-xrandr --output DVI-D-1 --mode 1920x1200 --rotate left --pos 3120x0
+xrandr --output HDMI-1 --pos 1200x175
+xrandr --output HDMI-2 --mode 1920x1200 --rotate left --pos 0x0
+xrandr --output DVI-D-1 --mode 1920x1200 --rotate left --pos 3760x0
 
 # Start udisks-glue for automounting
 if [ -x /usr/bin/udisks-glue ]; then
