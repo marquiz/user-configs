@@ -117,8 +117,9 @@ if ! shopt -oq posix; then
 fi
 
 # Added by marquiz
+export GOPATH=$HOME/go
 export EMAIL="markus.lehtonen@linux.intel.com"
-export PATH="$PATH:/home/marquiz/scripts"
+export PATH="$PATH:/home/marquiz/scripts:$GOPATH/bin"
 
 # Remove colon from bash autocompletion delimiters
 # makes navigating in obs project structure a lot nicer
@@ -145,7 +146,7 @@ fi
 if [ -n "$GIT_COMPLETION_SH" ]; then
     source $GIT_COMPLETION_SH
     GIT_PS1_SHOWCOLORHINTS=1
-    PROMPT_COMMAND='__git_ps1 "\[\033[33;1m\]\u@\h \[\033[34m\]\w\[\033[0m\]" "\\\$ "'
+    PROMPT_COMMAND='__git_ps1 "\[\033[35;1m\]\u@\h \[\033[34m\]\w\[\033[0m\]" "\\\$ "'
 fi
 #PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 export GIT_CEILING_DIRECTORIES=$HOME
