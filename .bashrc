@@ -119,7 +119,7 @@ fi
 # Added by marquiz
 export GOPATH=$HOME/go
 export EMAIL="markus.lehtonen@linux.intel.com"
-export PATH="$PATH:/home/marquiz/scripts:$GOPATH/bin"
+export PATH="$PATH:/home/marquiz/scripts:$GOPATH/bin:$HOME/.local/bin"
 
 # Remove colon from bash autocompletion delimiters
 # makes navigating in obs project structure a lot nicer
