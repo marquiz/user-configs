@@ -55,6 +55,11 @@ vnoremap <C-c> "+y
 " Map <Space> to clear search highlight
 map <Space> :noh<cr>
 
+"shortcuts to to jump in quickfix list
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+
 "set mouse mode
 "if strlen($DISPLAY)
 "    set mouse=a
