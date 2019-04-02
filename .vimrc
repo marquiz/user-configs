@@ -35,6 +35,9 @@ augroup myvimrc
     au BufWritePost .vimrc,_vimrc,vimrc so $MYVIMRC
 augroup END
 
+" set dash to be the <leader> key
+let mapleader = "-"
+
 "autocmd FileType c source ~/.vim/c-kern.vim
 autocmd FileType c source ~/.vim/c-2.vim
 autocmd FileType html setlocal ts=2 sw=2
