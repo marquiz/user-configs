@@ -44,6 +44,11 @@ autocmd FileType yaml setlocal ts=2 sw=2
 autocmd FileType go 2match Tab /[ ]/
 autocmd FileType go setlocal nolist
 
+"builder shortcuts for golang
+autocmd FileType go nmap <leader>b <Plug>(go-build)
+autocmd FileType go nmap <leader>r <Plug>(go-run)
+autocmd FileType go nmap <leader>t <Plug>(go-test)
+
 "copy to systems CLIPBOARD buffer instead of PRIMARY ("mouse selection" buf)
 vnoremap <C-c> "+y
 
