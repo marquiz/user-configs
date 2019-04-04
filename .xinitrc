@@ -66,6 +66,11 @@ ssh-add
 
 # Bell off
 xset -b
+
+# Turn off screen blanking and dpms
+xset s off
+xset -dpms
+
 xrandr &> /dev/null
 if [ -x /usr/bin/prlcc ]; then
     /usr/bin/prlcc &
