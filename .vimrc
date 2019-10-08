@@ -35,12 +35,40 @@ augroup myvimrc
     au BufWritePost .vimrc,_vimrc,vimrc so $MYVIMRC
 augroup END
 
+" set dash to be the <leader> key
+let mapleader = "-"
+
 "autocmd FileType c source ~/.vim/c-kern.vim
 autocmd FileType c source ~/.vim/c-2.vim
 autocmd FileType html setlocal ts=2 sw=2
 autocmd FileType htmldjango setlocal ts=2 sw=2
 autocmd FileType make setlocal noexpandtab
 autocmd FileType yaml setlocal ts=2 sw=2
+autocmd FileType go 2match Tab /[ ]/
+autocmd FileType go setlocal nolist
+
+"builder shortcuts for golang
+autocmd FileType go nmap <leader>b <Plug>(go-build)
+autocmd FileType go nmap <leader>r <Plug>(go-run)
+autocmd FileType go nmap <leader>t <Plug>(go-test)
 
 "copy to systems CLIPBOARD buffer instead of PRIMARY ("mouse selection" buf)
 vnoremap <C-c> "+y
+
+" Map <Space> to clear search highlight
+map <Space> :noh<cr>
+
+"shortcuts to to jump in quickfix list
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+
+" Disable vim version warning of the vim-go plugin
+let g:go_version_warning = 0
+
+" GO Highlight
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
