@@ -54,3 +54,5 @@ if [ -e /etc/bash_completion.d/git-prompt.sh ]; then
 fi
 #PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 export GIT_CEILING_DIRECTORIES=$HOME
+
+alias k=kubectl
