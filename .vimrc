@@ -66,6 +66,10 @@ map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
 
+" Skip multiple lines
+noremap <C-Up> 5k
+noremap <C-Down> 5j
+
 "set mouse mode
 "if strlen($DISPLAY)
 "    set mouse=a
