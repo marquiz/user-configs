@@ -1,3 +1,6 @@
+" Get the defaults that most users want.
+source $VIMRUNTIME/defaults.vim
+
 set nocompatible
 "filetype plugin on     " takes some actions based on your filetype--used for changelog
 filetype plugin indent on
