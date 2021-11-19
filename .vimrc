@@ -1,3 +1,6 @@
+" Get the defaults that most users want.
+source $VIMRUNTIME/defaults.vim
+
 set nocompatible
 "filetype plugin on     " takes some actions based on your filetype--used for changelog
 filetype plugin indent on
@@ -62,6 +65,10 @@ map <Space> :noh<cr>
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
+
+" Skip multiple lines
+noremap <C-Up> 5k
+noremap <C-Down> 5j
 
 "set mouse mode
 "if strlen($DISPLAY)
