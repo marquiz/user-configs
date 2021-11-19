@@ -52,6 +52,12 @@ if [ -e /etc/bash_completion.d/git-prompt.sh ]; then
     GIT_PS1_SHOWCOLORHINTS=1
     PROMPT_COMMAND='__git_ps1 "\[\033[32;1m\]\u@\h \[\033[34m\]\w\[\033[0m\]" "\\\$ "'
 fi
+
+if [ "$ASCIINEMA_REC" == "1" -o -n "$DEMO_PROMPT" ]; then
+    unset PROMPT_COMMAND
+    PS1='\[\033[32;1m\]\u@marquiz\[\033[0m\] $ '
+fi
+
 #PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 export GIT_CEILING_DIRECTORIES=$HOME
 
