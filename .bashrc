@@ -29,7 +29,7 @@ test -s ~/.alias && . ~/.alias || true
 
 # Added by marquiz
 export GOPATH=$HOME/go
-export EMAIL="markus.lehtonen@linux.intel.com"
+export EMAIL="markus.lehtonen@intel.com"
 export PATH="/sbin:/usr/sbin:$PATH:/home/marquiz/scripts:$GOPATH/bin:$HOME/.local/bin"
 
 # Remove colon from bash autocompletion delimiters
