@@ -91,7 +91,7 @@ if has("cscope")
     set csverb
 
     " Key Mappings
-    map <C-[> :cs find 3 <C-R>=expand("<cword>")<CR><CR>
+"    map <C-[> :cs find 3 <C-R>=expand("<cword>")<CR><CR>
     map <C-_> :cs find 0 <C-R>=expand("<cword>")<CR><CR>
 
     " Using 'CTRL-spacebar' then a search type makes the vim window
