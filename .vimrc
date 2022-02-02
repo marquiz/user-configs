@@ -31,6 +31,7 @@ hi Tab ctermbg=blue                 " highlight tab and no-breaking space with b
 
 " MISC SETTINGS
 set nobackup            " do not create backup files
+set maxmempattern=1500  " fix E363 for vim-go syntax highlighting of big files
 
 " Autoload vimrc when editing (and saving) it
 augroup myvimrc
