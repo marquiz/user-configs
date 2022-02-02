@@ -1,3 +1,6 @@
+" Get the defaults that most users want.
+source $VIMRUNTIME/defaults.vim
+
 set nocompatible
 "filetype plugin on     " takes some actions based on your filetype--used for changelog
 filetype plugin indent on
@@ -28,6 +31,7 @@ hi Tab ctermbg=blue                 " highlight tab and no-breaking space with b
 
 " MISC SETTINGS
 set nobackup            " do not create backup files
+set maxmempattern=1500  " fix E363 for vim-go syntax highlighting of big files
 
 " Autoload vimrc when editing (and saving) it
 augroup myvimrc
@@ -62,6 +66,45 @@ map <Space> :noh<cr>
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
+
+" Skip multiple lines
+noremap <C-Up> 5k
+noremap <C-Down> 5j
+
+"set mouse mode
+"if strlen($DISPLAY)
+"    set mouse=a
+"endif
+
+if has("cscope")
+"        set csprg=/usr/local/bin/cscope
+    set csto=0
+    set cst
+    set nocsverb
+    " add any database in current directory
+    if filereadable("cscope.out")
+        cs add cscope.out
+    " else add database pointed to by environment
+    elseif $CSCOPE_DB != ""
+        cs add $CSCOPE_DB
+    endif
+    set csverb
+
+    " Key Mappings
+"    map <C-[> :cs find 3 <C-R>=expand("<cword>")<CR><CR>
+    map <C-_> :cs find 0 <C-R>=expand("<cword>")<CR><CR>
+
+    " Using 'CTRL-spacebar' then a search type makes the vim window
+    " split vertically, with search result displayed in
+    " the new window.
+    nmap <C-@>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>
+    nmap <C-@>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap <C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>
+endif
 
 " Disable vim version warning of the vim-go plugin
 let g:go_version_warning = 0
