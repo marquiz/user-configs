@@ -13,7 +13,7 @@ export PATH
 
 # Added by marquiz:
 # start ssh-agent for non-graphical logins
-if [ x$DISPLAY == x ] ; then
+if [ -z "$DISPLAY" -a -z "$TMUX" ] ; then
     # Kill on shell exit
     #trap 'test -n "$SSH_AGENT_PID" && eval `ssh-agent -k`' 0
     # Launch the agent
