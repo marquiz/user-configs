@@ -10,6 +10,7 @@ fi
 
 # User specific aliases and functions
 # Added by marquiz
+export EDITOR=vim
 export GOPATH=$HOME/go
 export EMAIL="markus.lehtonen@intel.com"
 export PATH="/sbin:/usr/sbin:$PATH:/home/marquiz/scripts:$GOPATH/bin:$HOME/.local/bin"
