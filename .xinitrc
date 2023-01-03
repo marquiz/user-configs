@@ -70,6 +70,9 @@ xset -b
 # Start screensaver
 xscreensaver &
 
+# Start network manager applet
+nm-applet --sm-disable &
+
 # Set triple screen
 xrandr --output HDMI-1 --rotate left --pos 0x0
 xrandr --output DP-1 --pos 1440x175
