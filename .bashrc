@@ -25,3 +25,31 @@ if [ -d ~/.bashrc.d ]; then
 fi
 
 unset rc
+
+# Added by marquiz
+export EDITOR=vim
+export GOPATH=$HOME/go
+export EMAIL="markus.lehtonen@intel.com"
+export PATH="$PATH:$HOME/scripts:$GOPATH/bin"
+
+# Hack to make vim use 256 colors in terminator terminal
+# Remove when https://bugs.launchpad.net/terminator/+bug/794561 is deployed
+if [ "$TERM" == "xterm" ]; then
+    export TERM=xterm-256color
+fi
+
+# Git branch to prompt
+if [ -e /etc/bash_completion.d/git-prompt.sh ]; then
+    source /etc/bash_completion.d/git-prompt.sh
+    GIT_PS1_SHOWCOLORHINTS=1
+    PROMPT_COMMAND='__git_ps1 "\[\033[32;1m\]\u@\h \[\033[34m\]\w\[\033[0m\]" "\\\$ "'
+fi
+
+if [ "$ASCIINEMA_REC" == "1" -o -n "$DEMO_PROMPT" ]; then
+    unset PROMPT_COMMAND
+    PS1='\[\033[32;1m\]\u@marquiz\[\033[0m\] $ '
+fi
+
+export GIT_CEILING_DIRECTORIES=$HOME
+
+alias k=kubectl
