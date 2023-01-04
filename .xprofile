@@ -1,0 +1,18 @@
+if [ "$GDMSESSION" != "gnome" ]; then
+    # Add ssh-key
+    if [ -z "$SSH_AGENT" ] && [ -z "$SSH_AUTH_SOCK" ] && [ -z "$SSH_AGENT_PID" ] && [ -x /usr/bin/ssh-agent ]; then
+        eval `/usr/bin/ssh-agent`
+    fi
+
+    if test -S "$SSH_AUTH_SOCK" -a -x "$SSH_ASKPASS"; then
+           /usr/bin/ssh-add < /dev/null
+    fi
+
+    # Start screensaver
+    xscreensaver &
+
+    # Start network manager applet
+    nm-applet --sm-disable &
+
+    autorandr -c
+fi
