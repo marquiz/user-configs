@@ -15,4 +15,7 @@ if [ "$GDMSESSION" != "gnome" ]; then
     nm-applet --sm-disable &
 
     autorandr -c
+
+    # Start bluetooth applet
+    blueman-applet &
 fi
