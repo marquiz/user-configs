@@ -54,4 +54,7 @@ fi
 #PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 export GIT_CEILING_DIRECTORIES=$HOME
 
+source <(kubectl completion bash)
+
 alias k=kubectl
+complete -F __start_kubectl k
