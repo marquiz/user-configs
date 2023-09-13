@@ -120,7 +120,7 @@ fi
 export EDITOR=vim
 export GOPATH=$HOME/go
 export EMAIL="markus.lehtonen@intel.com"
-export PATH="$PATH:/home/marquiz/scripts:$GOPATH/bin:$HOME/.local/bin"
+export PATH="$PATH:/home/marquiz/scripts:$GOPATH/bin"
 
 # Hack to make vim use 256 colors in terminator terminal
 # Remove when https://bugs.launchpad.net/terminator/+bug/794561 is deployed
