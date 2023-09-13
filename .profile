@@ -38,3 +38,5 @@ if [ -z "$DISPLAY" -a -z "$TMUX" ] ; then
     ssh-add
     trap - SIGINT
 fi
+
+PATH="$PATH:/usr/local/go/bin"
