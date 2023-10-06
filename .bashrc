@@ -28,17 +28,10 @@
 test -s ~/.alias && . ~/.alias || true
 
 # Added by marquiz
+export EDITOR=vim
 export GOPATH=$HOME/go
 export EMAIL="markus.lehtonen@intel.com"
 export PATH="/sbin:/usr/sbin:$PATH:/home/marquiz/scripts:$GOPATH/bin:$HOME/.local/bin"
-
-# Remove colon from bash autocompletion delimiters
-# makes navigating in obs project structure a lot nicer
-export COMP_WORDBREAKS="`echo "$COMP_WORDBREAKS" | sed -e s/://`"
-
-# Use development versions of GBP and GBS
-export PYTHONPATH=~/src/git-buildpackage/:~/src/gbs:~/src/otctools/obs-service-git-buildpackage:~/src/otctools/obs-service-gbs
-#:~/src/mic
 
 # Hack to make vim use 256 colors in terminator terminal
 # Remove when https://bugs.launchpad.net/terminator/+bug/794561 is deployed
@@ -68,4 +61,10 @@ fi
 #PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 export GIT_CEILING_DIRECTORIES=$HOME
 
+source <(kubectl completion bash)
+
 alias k=kubectl
+complete -F __start_kubectl k
+
+source <(helm completion bash)
+source <(minikube completion bash)
