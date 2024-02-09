@@ -1,9 +1,14 @@
 if [ "$GDMSESSION" != "gnome" ]; then
-    # Add ssh-key
+    if [ -n "$SSH_AUTH_SOCK" ]; then
+        # Assume that gnome-keyring-daemon is running
+        gnome-keyring-daemon --components=ssh
+    fi
+
     if [ -z "$SSH_AGENT" ] && [ -z "$SSH_AUTH_SOCK" ] && [ -z "$SSH_AGENT_PID" ] && [ -x /usr/bin/ssh-agent ]; then
         eval `/usr/bin/ssh-agent`
     fi
 
+    # Add ssh-key
     if test -S "$SSH_AUTH_SOCK" -a -x "$SSH_ASKPASS"; then
            /usr/bin/ssh-add < /dev/null
     fi
