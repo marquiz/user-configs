@@ -61,3 +61,4 @@ complete -F __start_kubectl k
 
 source <(helm completion bash)
 source <(minikube completion bash)
+source <(kind completion bash)
