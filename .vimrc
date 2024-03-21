@@ -48,6 +48,7 @@ autocmd FileType html setlocal ts=2 sw=2
 autocmd FileType htmldjango setlocal ts=2 sw=2
 autocmd FileType make setlocal noexpandtab
 autocmd FileType yaml setlocal ts=2 sw=2
+autocmd FileType yaml,yaml.ansible setlocal indentkeys-=0#
 autocmd FileType go 2match Tab /[ ]/
 autocmd FileType go setlocal nolist
 
